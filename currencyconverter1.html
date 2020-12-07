@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>Currency Converter</title>
+<link  rel="icon" href="C:\Users\admin\Documents\My Web Sites\13-512.png" type="image/x-icon">
+</head>
+<style>
+*{
+	 margin:0;
+	 padding:0;
+	 box-sizing:border-box;
+}
+h1{
+     background-color:#00CC99;
+      text-align: center;
+      font-size: 38px;
+     padding: 20px;
+      font-weight: bold;
+     margin-left: 35%;
+     margin-right:35%;
+     cursor:pointer;
+      font-family: Times New Roman;
+}
+marquee{
+     background-color:#00FFFF;
+      font-size:20px;
+      padding-top: 6px;
+     margin: -23px;
+     margin-left: 35%;
+     margin-right: 35%;
+     cursor:pointer;
+}
+fieldset{
+       width:45%;
+       margin:auto;
+       border: 1px solid #000;
+	   text-align:left;
+	   font-size:20px;
+	   font-family:lato, sans-serif;
+	   
+}
+input[type=number],[id]{
+       background-color:#fff;
+        border: 1px solid #000;
+       border-radius: 2px;
+       border-width:1px;
+       color:#36454b;
+       font-size:15px;
+       margin:5px;
+        padding: 12px;
+      display: inline-block;
+}
+input[type=button]{
+      width:80px;
+      height:43px;
+      font-weight:bold;
+}
+	input[type=reset]{
+      width:95px;
+      height:43px;
+      font-weight:bold;  
+}
+</style>
+<script>
+function currencyConverter(valNum){
+if(converter.rupees.value<=0)
+window.alert("Enter value Greaterthan 0" );
+else{
+ document.getElementById("dollar").value = (valNum/73.38).toFixed(3);
+ document.getElementById("yuan").value = (valNum/10.72).toFixed(3);
+ document.getElementById("won").value = (valNum/0.062).toFixed(3);
+ document.getElementById("riyal").value = (valNum/19.78).toFixed(3);
+ document.getElementById("dinar").value = (valNum/242.55).toFixed(3);
+ document.getElementById("yen").value = (valNum/0.69).toFixed(3);
+ document.getElementById("pound").value = (valNum/96.81).toFixed(3);
+ document.getElementById("ringitt").value = (valNum/17.70).toFixed(3);
+ document.getElementById("euro").value = (valNum/87.47).toFixed(3);
+ document.getElementById("dirham").value = (valNum/19.98).toFixed(3);
+
+ }
+ }
+ </script>
+<body background ="C:\Users\admin\Downloads\imageedit_2_9088216360.png">
+<h1>CURRENCY CONVERTER</h1>
+<marquee>Welcome To The Online Currency Converter</marquee>
+<script>var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  document.write("Today is : " + daylist[day] + ".");
+  var hour = today.getHours();
+  var minute = today.getMinutes();
+  var second = today.getSeconds();
+  var prepand = (hour >= 12)? " PM ":" AM ";
+  hour = (hour >= 12)? hour - 12: hour;
+  if (hour===0 && prepand===' PM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Noon';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' PM';
+ } 
+  } 
+  if (hour===0 && prepand===' AM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Midnight';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' AM';
+  } 
+  } 
+document.write("<br>");
+document.write("Current Time : "+hour+prepand+  " : " + minute + " : " + second);
+</script>
+<br>
+<form name="converter">
+<fieldset>
+<label>INR Currency(Rupees): </label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<input type="number" name="rupees" required>
+<input type="button" value="CONVERT" onclick="currencyConverter(converter.rupees.value)"><br><br>
+<label>DOLLAR(AMERICAN):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input id="dollar"><br><br>
+
+<label>YUAN(CHINA):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp 
+<input id="yuan"><br><br>
+<label>WON(KOREA):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp 
+<input id="won"><br><br>
+<label>RIYAL(SAUDI):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ &nbsp &nbsp &nbsp &nbsp 
+<input id="riyal"><br><br>
+<label>DINAR(KUWAIT):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp 
+<input id="dinar"><br><br>
+<label>YEN(JAPAN):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp 
+<input id="yen"><br><br>
+<label>POUND(UK):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp 
+<input id="pound"><br><br>
+<label>RINGITT(MALAYSIA):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp 
+<input id="ringitt"><br><br>
+<label>EURO(EUROPE):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp 
+<input id="euro"><br><br>
+<label>DIRHAM (UAE):</label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp 
+<input id="dirham"><br><br>
+<input type="reset" value="Reset Form">
+<p align="center">You can press Reset Button for reseting the form.</p>
+</fieldset>
+</form>
+</body>
+</html>
