@@ -1,0 +1,37 @@
+<html>
+<head><link rel="icon" href="logo-telephone-symbol-tmobile-us-inc-call.jpg" type="image/x-icon">
+<title>PHONE NUMBER VALIDATION</title>
+<script type="text/javascript">
+function val(){
+if(frm.phone.value=="")
+{
+  alert("Please enter the phone number:");
+  frm.phone.focus();
+  return false;
+}
+if(isNaN(frm.phone.value))
+{ 
+  alert("Invalid phone number");
+  frm.phone.focus();
+  return false;
+}
+if(frm.phone.value).length<10)
+{
+  alert("Phone number should be minimum 10 digits.");
+  frm.phone.focus();
+  return false;
+}
+return true;
+}  
+</script>
+</head>
+<body>
+<center><h2>PHONE NUMBER VALIDATION</h2></center>
+<center><form name="frm" method="post" action="thankyou.html">
+PHONE:<input type="text" name="phone" placeholder="Enter Phone Number"/><br><br>
+<input type="submit" value="Submit" onclick="return val()/">
+<input type="reset" value="Reset"></center>
+</form>
+</body>
+</html>
+
